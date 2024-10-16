@@ -1,5 +1,6 @@
-package com.example.onlineshop;
+package com.example.onlineshop.dao;
 
+import com.example.onlineshop.domain.Product;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

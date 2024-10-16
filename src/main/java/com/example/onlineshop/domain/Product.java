@@ -1,11 +1,14 @@
-package com.example.onlineshop;
+package com.example.onlineshop.domain;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import jakarta.persistence.Table;
+
 @Entity
+@Table(name = "Products")
 public class Product {
 
     @Id

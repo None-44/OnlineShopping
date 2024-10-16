@@ -1,5 +1,7 @@
-package com.example.onlineshop;
+package com.example.onlineshop.service;
 
+import com.example.onlineshop.dao.ProductRepository;
+import com.example.onlineshop.domain.Product;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
