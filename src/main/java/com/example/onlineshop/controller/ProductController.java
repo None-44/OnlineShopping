@@ -50,4 +50,19 @@ public class ProductController {
         productService.unfreezeProduct(id);
         return ResponseEntity.ok().build();
     }
+
+    // 搜索商品
+    @GetMapping("/search")
+    public ResponseEntity<List<Product>> searchProducts(@RequestParam String name) {
+        List<Product> products = productService.searchProducts(name);
+        return ResponseEntity.ok(products);
+    }
+
+    // 根据类别浏览商品
+    @GetMapping("/category")
+    public ResponseEntity<List<Product>> getProductsByCategory(@RequestParam String category1, @RequestParam String category2) {
+        List<Product> products = productService.getProductsByCategory(category1, category2);
+        return ResponseEntity.ok(products);
+    }
+
 }

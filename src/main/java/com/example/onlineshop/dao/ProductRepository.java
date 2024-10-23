@@ -5,10 +5,20 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.Optional;
+import java.util.List;
+
 //接口类，用于操作数据库
 @Repository
 public interface ProductRepository extends JpaRepository<Product, Long> {
-    Optional<Product> findByIsFrozenFalseAndIsSoldFalse();  // 查找当前正在售卖的商品
+    // 按商品名称模糊搜索
+    List<Product> findByNameContainingIgnoreCase(String name);
+
+    // 按一级或二级类别搜索
+    List<Product> findByCategoryLevel1OrCategoryLevel2(String categoryLevel1, String categoryLevel2);
+
+    // 查询库存大于0的商品
+    List<Product> findByStockQuantityGreaterThan(int quantity);
+    //Optional<Product> findByIsFrozenFalseAndIsSoldFalse();  // 查找当前正在售卖的商品
 }
 
 /*继承 JpaRepository<Product, Long>，常用的方法有：
