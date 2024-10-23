@@ -4,7 +4,6 @@ import com.example.onlineshop.domain.Product;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import java.util.Optional;
 import java.util.List;
 
 //接口类，用于操作数据库
