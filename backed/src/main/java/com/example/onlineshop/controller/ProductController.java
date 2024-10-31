@@ -15,7 +15,7 @@ public class ProductController {
 
     @Autowired
     private ProductService productService;
-
+0
     // 发布商品
     @PostMapping
     public ResponseEntity<Product> createProduct(@RequestBody Product product) {
